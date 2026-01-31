@@ -1,0 +1,116 @@
+{
+  "categories": {
+    "eco-friendly": {
+      "name": "Eco-Friendly Companies",
+      "description": "Companies producing eco-friendly products with minimal carbon footprint and sustainable practices.",
+      "totalCompanies": 42,
+      "avgEmission": "85,000 tCO₂",
+      "avgCompliance": "92%",
+      "keyCharacteristics": [
+        "Sustainable production methods",
+        "High environmental compliance",
+        "Renewable energy usage",
+        "Circular economy practices"
+      ],
+      "color": "#2d9d5f",
+      "icon": "leaf"
+    },
+    "max-emission": {
+      "name": "Maximum Emission Companies",
+      "description": "Companies with the highest carbon emissions requiring immediate regulatory attention.",
+      "totalCompanies": 28,
+      "avgEmission": "1,200,000 tCO₂",
+      "avgCompliance": "61%",
+      "keyCharacteristics": [
+        "High energy-intensive operations",
+        "Often non-compliant with regulations",
+        "Require emission reduction plans",
+        "Subject to penalties and audits"
+      ],
+      "color": "#e74c3c",
+      "icon": "industry"
+    },
+    "min-emission": {
+      "name": "Minimum Emission Companies",
+      "description": "Companies with the lowest carbon emissions and high operational efficiency.",
+      "totalCompanies": 36,
+      "avgEmission": "42,000 tCO₂",
+      "avgCompliance": "95%",
+      "keyCharacteristics": [
+        "Energy-efficient operations",
+        "Advanced technology adoption",
+        "High compliance scores",
+        "Model for industry best practices"
+      ],
+      "color": "#3498db",
+      "icon": "chart-bar"
+    },
+    "medium-emission": {
+      "name": "Medium Emission Companies",
+      "description": "Companies with emissions between minimum and maximum levels with improvement potential.",
+      "totalCompanies": 36,
+      "avgEmission": "28,000 tCO₂",
+      "avgCompliance": "77%",
+      "keyCharacteristics": [
+        "Moderate environmental impact",
+        "Implementing improvement plans",
+        "Steady compliance",
+        "Opportunities for optimization"
+      ],
+      "color": "#f39c12",
+      "icon": "balance-scale"
+    }
+  },
+  "dashboardStats": {
+    "totalCompaniesMonitored": 142,
+    "totalAnnualEmissions": "8,421,350 tCO₂",
+    "complianceRate": "78%",
+    "highRiskCompanies": 23,
+    "lastUpdated": "2023-10-15T10:30:00Z",
+    "recentActivities": [
+      {
+        "title": "GreenTech Solutions reduced emissions by 15%",
+        "time": "2 hours ago",
+        "type": "positive",
+        "icon": "check-circle"
+      },
+      {
+        "title": "SteelCorp Industries exceeded emission limits",
+        "time": "1 day ago",
+        "type": "warning",
+        "icon": "exclamation-triangle"
+      },
+      {
+        "title": "Monthly emission reports submitted by 142 companies",
+        "time": "2 days ago",
+        "type": "info",
+        "icon": "file-alt"
+      }
+    ]
+  },
+  "industries": [
+    "Technology",
+    "Manufacturing",
+    "Energy",
+    "Construction",
+    "Agriculture",
+    "Transportation",
+    "Textile",
+    "Chemicals",
+    "Food Processing",
+    "Water Treatment",
+    "Electronics",
+    "Medical Equipment",
+    "Packaging",
+    "Paper & Pulp",
+    "Plastics",
+    "Automotive"
+  ],
+  "systemInfo": {
+    "name": "CarbonWatch",
+    "version": "2.0.0",
+    "authority": "Ministry of Environment & Climate Action",
+    "contact": "environment@government.gov",
+    "website": "https://carbonwatch.gov"
+  }
+}

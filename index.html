@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Monitor - Government Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>Carbon<span>Watch</span></h1>
+                <div class="subtitle">Government Emission Monitoring System</div>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="user-details">
+                    <div class="user-name">Environment Ministry</div>
+                    <div class="user-role">Government Dashboard</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Summary -->
+            <section class="dashboard-summary">
+                <h2><i class="fas fa-tachometer-alt"></i> Carbon Emission Dashboard</h2>
+                <p class="summary-text">Monitor and analyze carbon emissions from registered companies. Click on any category to view detailed information.</p>
+                
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #e6f7e9;">
+                            <i class="fas fa-leaf" style="color: #2d9d5f;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">Eco-Friendly Companies</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #ffe6e6;">
+                            <i class="fas fa-industry" style="color: #e74c3c;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">28</div>
+                            <div class="stat-label">High Emission Companies</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #e6f0ff;">
+                            <i class="fas fa-chart-line" style="color: #3498db;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">142</div>
+                            <div class="stat-label">Total Companies Monitored</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="categories-section">
+                <h2><i class="fas fa-list"></i> Company Categories by Emission Level</h2>
+                
+                <div class="categories-grid">
+                    <!-- Category 1: Eco-Friendly Companies -->
+                    <div class="category-card" id="eco-friendly-card">
+                        <div class="category-header">
+                            <div class="category-icon" style="background-color: #2d9d5f;">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Eco-Friendly Companies</h3>
+                        </div>
+                        <div class="category-body">
+                            <p>Companies producing eco-friendly products with minimal carbon footprint. These companies have implemented sustainable practices and have high environmental compliance scores.</p>
+                            <div class="category-stats">
+                                <div class="category-stat">
+                                    <span class="stat-label">Companies:</span>
+                                    <span class="stat-value">42</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Emission:</span>
+                                    <span class="stat-value">850 tCO₂</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Efficiency:</span>
+                                    <span class="stat-value">92%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-footer">
+                            <button class="view-btn" onclick="viewCategory('eco-friendly')">
+                                <i class="fas fa-eye"></i> View Companies
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Maximum Emission Companies -->
+                    <div class="category-card" id="max-emission-card">
+                        <div class="category-header">
+                            <div class="category-icon" style="background-color: #e74c3c;">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3>Maximum Emission Companies</h3>
+                        </div>
+                        <div class="category-body">
+                            <p>Companies producing the highest carbon emissions. These require immediate attention and potential regulatory action to reduce environmental impact.</p>
+                            <div class="category-stats">
+                                <div class="category-stat">
+                                    <span class="stat-label">Companies:</span>
+                                    <span class="stat-value">28</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Emission:</span>
+                                    <span class="stat-value">1.2M tCO₂</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Risk Level:</span>
+                                    <span class="stat-value">High</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-footer">
+                            <button class="view-btn" onclick="viewCategory('max-emission')">
+                                <i class="fas fa-eye"></i> View Companies
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Minimum Emission Companies -->
+                    <div class="category-card" id="min-emission-card">
+                        <div class="category-header">
+                            <div class="category-icon" style="background-color: #3498db;">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Minimum Emission Companies</h3>
+                        </div>
+                        <div class="category-body">
+                            <p>Companies with the lowest carbon emissions. These are models of efficient operations with minimal environmental impact.</p>
+                            <div class="category-stats">
+                                <div class="category-stat">
+                                    <span class="stat-label">Companies:</span>
+                                    <span class="stat-value">36</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Emission:</span>
+                                    <span class="stat-value">420 tCO₂</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Compliance:</span>
+                                    <span class="stat-value">94%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-footer">
+                            <button class="view-btn" onclick="viewCategory('min-emission')">
+                                <i class="fas fa-eye"></i> View Companies
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Medium Emission Companies -->
+                    <div class="category-card" id="medium-emission-card">
+                        <div class="category-header">
+                            <div class="category-icon" style="background-color: #f39c12;">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>Medium Emission Companies</h3>
+                        </div>
+                        <div class="category-body">
+                            <p>Companies with emissions between minimum and maximum levels. These have moderate environmental impact and potential for improvement.</p>
+                            <div class="category-stats">
+                                <div class="category-stat">
+                                    <span class="stat-label">Companies:</span>
+                                    <span class="stat-value">36</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Emission:</span>
+                                    <span class="stat-value">2k tCO₂</span>
+                                </div>
+                                <div class="category-stat">
+                                    <span class="stat-label">Improvement:</span>
+                                    <span class="stat-value">Needed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-footer">
+                            <button class="view-btn" onclick="viewCategory('medium-emission')">
+                                <i class="fas fa-eye"></i> View Companies
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2><i class="fas fa-history"></i> Recent Compliance Updates</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background-color: #e6f7e9;">
+                            <i class="fas fa-check-circle" style="color: #2d9d5f;"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">GreenTech Solutions reduced emissions by 15%</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background-color: #ffe6e6;">
+                            <i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">SteelCorp Industries exceeded emission limits</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background-color: #e6f0ff;">
+                            <i class="fas fa-file-alt" style="color: #3498db;"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Monthly emission reports submitted by 142 companies</div>
+                            <div class="activity-time">2 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>CarbonWatch</span>
+                </div>
+                <div class="footer-info">
+                    <p>Government Carbon Emission Monitoring System</p>
+                    <p>Ministry of Environment & Climate Action</p>
+                    <p>Data updated daily from company reports</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CarbonWatch - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
